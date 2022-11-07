@@ -1,6 +1,9 @@
 # Rabbot
 discord py bot
-
+- say Hello to Rabbot
+```py
+!hello
+```
 - feature colors your lucky color 
 ```py
 !color = 🔴🟠🟡🟢🔵🟣🟤⚫⚪
@@ -9,3 +12,4 @@ discord py bot
 ```py
 !dice
 ```
+
