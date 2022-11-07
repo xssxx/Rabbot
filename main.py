@@ -26,7 +26,7 @@ async def on_ready():
 @client.command()
 async def color(ctx):
     a = random.randrange(0, 10)
-    await ctx.send(colors[a])
+    await ctx.send("สีนำโชคประจำวันของคุณคือ {}".format(colors[a]))
 
 @client.command()
 async def command(ctx):
@@ -36,11 +36,11 @@ async def command(ctx):
 
 @client.command()
 async def hello(ctx):  # when u type !hello in discord, it run hello function
-    await ctx.send("Hello, I am Rabbot.")
+    await ctx.send("สวัสดีเราคือ Rabbot")
 
 @client.command()
 async def dice(ctx):
-    await ctx.send("Your 🎲 number is: {} ".format(random.randrange(0, 7)))
+    await ctx.send("แต้ม 🎲 ของคุณคือ: {} ".format(random.randrange(0, 7)))
 
 @client.command()
 async def rps(ctx, values: int):
