@@ -7,6 +7,9 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+colors = ['🔴','🟠','🟡','🟢',
+          '🔵','🟣','🟤','⚫','⚪']
+
 # client = commands.Bot(intents=discord.Intents.default(), command_prefix='!')
 
 intents = discord.Intents.default()
@@ -16,11 +19,14 @@ client = discord.Client(intents=intents)
 
 client = commands.Bot(command_prefix='!', intents=intents)
 
-
 @client.event
 async def on_ready():
     print("The Rabbot is now ready!")
 
+@client.command()
+async def color(ctx):
+    a = random.randrange(0, 10)
+    await ctx.send(colors[a])
 
 @client.command()
 async def command(ctx):
@@ -28,16 +34,13 @@ async def command(ctx):
     text += "!rps = play rock paper scissor (still in progess)"
     await ctx.send(text)
 
-
 @client.command()
 async def hello(ctx):  # when u type !hello in discord, it run hello function
     await ctx.send("Hello, I am Rabbot.")
 
-
 @client.command()
 async def dice(ctx):
     await ctx.send("Your 🎲 number is: {} ".format(random.randrange(0, 7)))
-
 
 @client.command()
 async def rps(ctx, values: int):
