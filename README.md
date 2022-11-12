@@ -15,4 +15,10 @@ Discord python bot
 ```
 !dice
 ```
+- rock paper scissor (play with bot)
+0 = rock, 1 = paper, 2 = scissor
+```
+!rps 0
+```
+
 
