@@ -1,17 +1,17 @@
 # Rabbot
-discord python bot
-- say Hello to Rabbot
+Discord python bot
+- Say hello to Rabbot
 ```
 !hello
 ```
-- feature colors your lucky color 
+- Your lucky color 
 ```
 !color
 ```
 ```
  🔴🟠🟡🟢🔵🟣🟤⚫⚪
 ```
-- feature roll dice 1-6
+- Roll dice 1-6
 ```
 !dice
 ```
