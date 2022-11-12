@@ -1,8 +1,9 @@
 import discord
 import random
 import os
+import rps_file
 from discord.ext import commands
-from rps import rps
+from rps_file import *
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -44,7 +45,11 @@ async def dice(ctx):
 
 @client.command()
 async def rps(ctx, values: int):
-    await ctx.send("0 = rock, 1 = scissor, 2 = paper")
-    await ctx.send(rps(int(values)))
+    # await ctx.send("0 = rock, 1 = scissor, 2 = paper")
+    text = '0 = rock, 1 = scissor, 2 = paper\n'
+    text += f'Your opponent move is {rps_file.opponent_move}\n'
+    text += rps_game(int(values))
+
+    await ctx.send(text)
 
 client.run(os.getenv("TOKEN"))
