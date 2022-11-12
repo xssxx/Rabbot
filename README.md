@@ -1,5 +1,5 @@
 # Rabbot
-discord py bot
+discord python bot
 - say Hello to Rabbot
 ```py
 !hello
